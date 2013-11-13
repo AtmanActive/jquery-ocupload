@@ -77,7 +77,8 @@
         var input = $("<input>", {
             name     : options.name + '[]',
             multiple : 'multiple',
-            type     : 'file'
+            type     : 'file',
+            accept   : options.accept,
         }).css({
             position : 'absolute',
             display  : 'none',
