@@ -92,7 +92,17 @@
         form.append(input);
         element.after(form);
         element.after(iframe);
-	element.click(function(){input.click(); return false;});
+	element.click
+	(
+		function()
+		{
+			if ( ! element.hasClass( 'ui-state-disabled' )  )
+			{
+				input.click();
+			}
+			return false;
+		}
+	);
 
         /** Find the container and make it nice and snug */
         var container = element.parent().css({
